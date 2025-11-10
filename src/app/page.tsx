@@ -1,8 +1,15 @@
 import Link from "next/link";
 import Bgimg1 from "./../../public/images/1.png"
+import HomeAbout from "./home component/about/page";
+import HomeCooking from "./home component/cooking/page";
+import HomeGuestHouse from "./home component/guest house/page";
+import HomeSafariSection from "./home component/safari/page";
+import HomeCustomerFeedback from "./home component/customer feedback/page";
+import HomeGallerySection from "./home component/gallery/page";
 
 export default function Home() {
   return (
+    <>
     <section
       className="relative flex items-center justify-center h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${Bgimg1.src})` }}
@@ -25,5 +32,15 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <div className="max-w-7xl mx-auto my-10"><HomeAbout/></div>
+    <div className="max-w-7xl mx-auto my-10"><HomeCooking/></div>
+    
+    
+    <HomeGuestHouse/>
+    <HomeSafariSection/>
+
+    <div className="max-w-7xl mx-auto my-10">    <HomeCustomerFeedback/></div>
+    <HomeGallerySection/>
+    </>
   );
 }

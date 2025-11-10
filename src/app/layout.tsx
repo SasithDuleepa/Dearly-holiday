@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Qwitcher_Grypen } from 'next/font/google';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -9,6 +10,12 @@ const poppins = Poppins({
   display: "swap",
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const qwitcher = Qwitcher_Grypen({
+  subsets: ['latin'],
+  variable: "--font-qwitcher",
+  weight: ['400', '700'], // optional weights
 });
 
 export const metadata: Metadata = {
