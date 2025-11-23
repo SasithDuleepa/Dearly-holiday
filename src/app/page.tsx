@@ -5,8 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Bgimg1 from "./../../public/images/3.png";
 
-import  Hero1 from "../../public/sample images/home hero/1.png"
-
 import HomeAbout from "./home component/about/page";
 import HomeCooking from "./home component/cooking/page";
 import HomeGuestHouse from "./home component/guest house/page";
@@ -24,7 +22,7 @@ export default function Home() {
       {/* 🌅 Hero Section */}
       <section
         className="relative flex items-center justify-center h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${Hero1.src})` }}
+        style={{ backgroundImage: `url(${Bgimg1.src})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
