@@ -5,6 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Bgimg1 from "./../../public/images/3.png";
 
+
+
+import Hero1 from "../../public/sample images/home hero/1.png"
+
 import HomeAbout from "./home component/about/page";
 import HomeCooking from "./home component/cooking/page";
 import HomeGuestHouse from "./home component/guest house/page";
@@ -21,12 +25,35 @@ export default function Home() {
     <>
       {/* 🌅 Hero Section */}
       <section
-        className="relative flex items-center justify-center h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${Bgimg1.src})` }}
+      // className="home-header-main"
+        className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center"
+        // style={{ backgroundImage: `url(${Hero1.src})` }}
+
       >
+
+
+        <div className="pic-wrapper absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 h-screen" >
+          <div className='figure  pic-1' ></div>
+  <div className='figure  pic-2 ' ></div>
+  <div className='figure  pic-3 ' ></div>
+  <div className='figure  pic-4 ' ></div>
+        </div>
+          
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
-        <motion.div
+        <div className="flex items-center z-10 justify-center w-[100%]  mt-10">
+          <h1  className="font-montserrat text-7xl text-white z-10 font-[300]">Welcome to our little paradise</h1>
+        </div>
+
+        <div className="flex justify-center items-center  z-10  gap-5 w-[100%] mt-[20%] ">
+        <h1 className="font-montserrat text-5xl text-white z-10 text-right font-[100] w-[100%]  ">Experience <br/> the warmth of <br/>Sri Lankan hospitality</h1>
+        <div className="bg-white h-[150px] w-2 z-10"></div>
+        <h1 className="font-montserrat text-6xl text-white z-10 font-[300] w-[100%]">Dearly <br/> Holiday  Inn</h1>
+        </div>
+
+
+
+        {/* <motion.div
           className="relative z-10 text-center text-white px-6"
           initial="hidden"
           animate="visible"
@@ -42,14 +69,17 @@ export default function Home() {
       initial={{ filter: 'blur(20px)', opacity: 0 }}
       animate={isInView ? { filter: 'blur(0px)', opacity: 1 } : {}}
       transition={{ duration: 1.2 }}
-      className="text-4xl tracking-normal  text-center sm:text-6xl font-bold tracking-tighter md:text-10xl md:leading-[4rem]"
+      className="text-4xl tracking-normal  text-center sm:text-6xl  tracking-tighter md:text-10xl md:leading-[4rem]"
     >
-                {/* <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 mt-24 md:mt-10"> */}
-            Experience the{" "}
-            <span className="text-primary">warmth of Sri Lankan hospitality</span> <br />
-            in the heart of <span className="text-primary">Tissamaharama</span>
-          {/* </h1> */}
+          
+     
+            <span className="text-primary font-montserrat ">Experience the warmth of Sri Lankan hospitality</span>
+
     </motion.h1>
+    
+
+     
+            
 
 
 
@@ -67,7 +97,7 @@ export default function Home() {
               <p className="text-1xl md:text-2xl text-white py-3 px-3 sm-none">|</p>
                <Link href="/safari" className="text-1xl md:text-2xl text-white py-3 px-6 glass-sm"> Explore Safari </Link>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </section>
 
 

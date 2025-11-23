@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { Qwitcher_Grypen } from 'next/font/google';
+import { Montserrat, Qwitcher_Grypen } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -10,6 +10,13 @@ const poppins = Poppins({
   display: "swap",
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const montserrat = Montserrat({
+  subsets: [],
+  variable: "--font-montserrat",
+  weight: "variable", // allows any weight including 550
+  display: "swap",
 });
 
 const qwitcher = Qwitcher_Grypen({
@@ -31,8 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-sans antialiased bg-ivory-background text-forest-green`}
-      >
+  className={`${montserrat.variable} ${qwitcher.variable} font-sans antialiased bg-ivory-background text-forest-green`}
+>
+
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow pt-20">{children}</main>
