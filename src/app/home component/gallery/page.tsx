@@ -1,13 +1,16 @@
 'use client';
-
+import Image from 'next/image';
 import Masonry from 'react-masonry-css';
 import GalleryItem from '../../../components/GalleryItem';
 import Link from 'next/link';
+import Img1 from '../../../../public/sample images/home gallery/1.png'
+import Img2 from '../../../../public/sample images/home gallery/2.png'
+import Img3 from '../../../../public/sample images/home gallery/3.png'
 
 const images = [
-  { src: '/images/1.png', alt: 'Guest house exterior' },
-  { src: '/images/2.png', alt: 'Safari jeep in Yala National Park' },
-  { src: '/images/3.png', alt: 'Traditional Sri Lankan cooking class' },
+  { src: '../../../../public/sample images/home gallery/1.png', alt: 'Guest house exterior' },
+  { src: '../../../../public/sample images/home gallery/2.png', alt: 'Safari jeep in Yala National Park' },
+  { src: '../../../../public/sample images/home gallery/3.png', alt: 'Traditional Sri Lankan cooking class' },
 
 
 ];
@@ -38,17 +41,25 @@ const HomeGallerySection = () => {
             A glimpse into our guest house, Yala safari adventures, and traditional Sri Lankan cooking experiences.
           </p>
         </div>
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid justify-center"
-          columnClassName="my-masonry-grid_column"
-        >
-          {images.map((image, index) => (
-            <div key={index} className="mb-4">
-              <GalleryItem src={image.src} alt={image.alt} />
-            </div>
-          ))}
-        </Masonry>
+
+
+        <div className='flex items-center justify-center gap-10 py-10'>
+           <div className={`work-card-main1 `}>
+             <div className="work-card-main-shade1"></div>
+             <p className="work-card-title1">Guest House</p>
+             <p className="work-card-content1">Comfortable Rooms, Peaceful Ambience</p>
+           </div>
+                      <div className={`work-card-main2 `}>
+             <div className="work-card-main-shade2"></div>
+             <p className="work-card-title2">Wild Safari</p>
+             <p className="work-card-content2">Unforgettable Safari Jeep Tours</p>
+           </div>
+                      <div className={`work-card-main3 `}>
+             <div className="work-card-main-shade3"></div>
+             <p className="work-card-title3">Cooking Lessons</p>
+             <p className="work-card-content3">Hands-On Cultural Cooking Classes</p>
+           </div>
+        </div>
       </div>
       <div className='flex justify-center'>
         <Link href="/gallery" className='button px-15'>See more</Link>

@@ -39,16 +39,24 @@ export default function Home() {
   <div className='figure  pic-4 ' ></div>
         </div>
           
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+        <div className=" absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
-        <div className="flex items-center z-10 justify-center w-[100%]  mt-10">
-          <h1  className="font-montserrat text-7xl text-white z-10 font-[300]">Welcome to our little paradise</h1>
+        <div className="flex items-center z-10 justify-center w-[100%]  mt-70">
+          <h1  className="text-primary font-montserrat  text-8xl text-white z-10 font-[300] border-t-4 border-b-4 ">Welcome to our little paradise</h1>
         </div>
 
-        <div className="flex justify-center items-center  z-10  gap-5 w-[100%] mt-[20%] ">
-        <h1 className="font-montserrat text-5xl text-white z-10 text-right font-[100] w-[100%]  ">Experience <br/> the warmth of <br/>Sri Lankan hospitality</h1>
-        <div className="bg-white h-[150px] w-2 z-10"></div>
-        <h1 className="font-montserrat text-6xl text-white z-10 font-[300] w-[100%]">Dearly <br/> Holiday  Inn</h1>
+        <div className="flex justify-center items-center  z-10  gap-10 w-[100%] mt-[18%] ">
+
+          <div className="z-10 text-right  w-[100%]  home-bottom-text-left-div">
+            <h1 className="font-montserrat text-4xl text-white z-10 text-right font-[100]  home-bottom-text-left">Experience <br/> the warmth of <br/>Sri Lankan hospitality</h1>
+          </div>
+        
+        <div className="bg-white  home-bottom-text-center-div"></div>
+
+        <div  className=" z-10  w-[100%] home-bottom-text-right-div">
+          <h1 className="font-montserrat text-5xl text-white z-10 font-[300]  home-bottom-text-right">Dearly <br/> Holiday  Inn</h1>
+        </div>
+        
         </div>
 
 
@@ -147,8 +155,11 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <HomeCooking />
+        <div className=" mx-auto  home-cooking w-full flex justify-center   bg-gradient-to-b from-black/60 to-black/80 ">
+         
+            <HomeCooking />
+         
+          
         </div>
       </motion.section>
 

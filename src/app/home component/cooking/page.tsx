@@ -4,15 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import image1 from "../../../../public/images/cooking home/1.png";
-import image2 from "../../../../public/images/cooking home/2.png";
+import image1 from "../../../../public/sample images/home cooking/4.png";
+import image2 from "../../../../public/sample images/home cooking/5.png";
 
 export default function HomeCooking() {
   return (
-    <section className="text-center my-5 px-6 md:px-16">
+    <section className="text-center max-w-7xl my-5 px-6 md:px-16">
       {/* Heading */}
       <motion.h1
-        className="font-qwitcher mb-8 text-foreground text-5xl md:text-7xl xl:text-9xl leading-tight"
+        className="font-qwitcher mb-8 text-background text-5xl md:text-7xl xl:text-9xl leading-tight"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -27,7 +27,7 @@ export default function HomeCooking() {
       </motion.h1>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col-reverse md:flex-row items-start justify-center gap-12 mt-10">
+      <div className="flex flex-col-reverse md:flex-row items-start justify-center gap-12 my-10 ">
         {/* Text Section */}
         <motion.div
           className="w-full md:w-1/2 text-left md:text-justify"
@@ -36,7 +36,7 @@ export default function HomeCooking() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-muted-foreground text-base md:text-lg lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed [text-shadow:_0_4px_14px_rgba(0,0,0,0.35)]">
+          <p className="text-background font-montserrat text-base md:text-lg lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed [text-shadow:_0_4px_14px_rgba(0,0,0,0.35)]">
             Join our hands-on cooking class and uncover the secrets of authentic
             Sri Lankan cuisine — from fragrant coconut curries to crispy golden
             hoppers. In our family kitchen, you’ll cook with fresh local
@@ -58,12 +58,7 @@ export default function HomeCooking() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Link
-              href="/cooking-class"
-              className="inline-block px-8 py-3 bg-[#6b3f1d] text-white text-lg rounded-full shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300"
-            >
-              Explore More
-            </Link>
+            
           </motion.div>
         </motion.div>
 
@@ -91,7 +86,7 @@ export default function HomeCooking() {
 
           {/* Second image — stacked on mobile, overlaid on desktop */}
           <motion.div
-            className="w-[85%] sm:w-[75%] md:w-[65%] rounded-2xl overflow-hidden shadow-2xl mt-6 md:mt-0 md:absolute md:bottom-[-30%] md:right-[-5%]"
+            className="w-[85%] sm:w-[75%] md:w-[65%] rounded-2xl overflow-hidden shadow-2xl mt-5 md:mt-0 md:absolute md:bottom-[-60%] md:right-[-5%]"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ duration: 0.5 }}
           >
@@ -102,7 +97,16 @@ export default function HomeCooking() {
             />
           </motion.div>
         </motion.div>
+
+
       </div>
+
+              <Link
+              href="/cooking-class"
+              className="inline-block px-8 py-3 bg-[#6b3f1d] text-white text-lg rounded-full shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+            >
+              Explore More
+            </Link>
     </section>
   );
 }
