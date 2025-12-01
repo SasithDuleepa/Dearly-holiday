@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect } from "react";
@@ -156,6 +157,8 @@ const SafariPage = () => {
       </section>
     </main>
   );
-};
+
+
+
 
 export default SafariPage;

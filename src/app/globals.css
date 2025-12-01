@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap");
 
 :root {
   --background: #ffffff;
@@ -264,6 +265,7 @@ body {
   align-items: center;
   justify-content: center;
   border: 3px solid oklch(55.4% 0.135 66.442);
+  border: 3px solid #e4b945;
   border-radius: 45px;
   transition: all 0.3s;
   cursor: pointer;
@@ -587,4 +589,7 @@ body {
   opacity: 1;
 
   transform: translateY(-155px);
+}
+  background: #e4b945;
+  color: white;
 }
