@@ -1,8 +1,8 @@
-import React from 'react';
-import SafariCard from '@/app/components/safari/SafariCard';
 
-const HomeSafariSection = () => {
-  return <SafariCard isPage={false} />;
-};
-
-export default HomeSafariSection;
+export default function HomeSafari() {
+  return (
+    <div>
+      home safari section
+    </div>
+  )
+}
