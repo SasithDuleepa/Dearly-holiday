@@ -37,7 +37,7 @@ export default function HomeCooking() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-muted-foreground text-base md:text-xl font-medium leading-relaxed">
+          <p className="text-background text-base md:text-xl font-medium leading-relaxed">
             Join our hands-on cooking class and uncover the secrets of authentic
             Sri Lankan cuisine — from fragrant coconut curries to crispy golden
             hoppers. In our family kitchen, you’ll cook with fresh local

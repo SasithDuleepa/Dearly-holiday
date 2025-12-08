@@ -1,16 +1,32 @@
 import Image from 'next/image';
 import { FaBinoculars, FaCameraRetro, FaMapMarkedAlt, FaTree } from 'react-icons/fa';
 import Link from 'next/link';
+import { motion } from "framer-motion";
 
 const HomeSafariSection = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 ">
+      {/* Heading */}
+      <motion.h1
+        className="font-qwitcher text-center mb-12 text-6xl md:text-8xl xl:text-9xl leading-tight"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        E<span className="text-primary font-semibold">mbark </span>
+        O<span className="text-primary font-semibold">n </span>
+        A<span className="text-primary font-semibold">n  </span>
+        U<span className="text-primary font-semibold">nforgettable </span>
+        S<span className="text-primary font-semibold">afari </span>
+        A<span className="text-primary font-semibold">dventure </span>
+      </motion.h1>
       
       {/* TOP CENTER TEXT */}
       <div className="text-center max-w-3xl mx-auto px-4 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-          Embark on an Unforgettable Safari Adventure
-        </h2>
+
+
+        
         <p className="text-gray-600 text-base md:text-lg leading-relaxed">
           Experience the untamed beauty of the wilderness and witness majestic creatures in their natural habitat.
           Our expert guides will lead you on an exhilarating journey through breathtaking landscapes, creating
@@ -18,7 +34,7 @@ const HomeSafariSection = () => {
         </p>
       </div>
 
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto py-4 px-4  rounded-lg shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* LEFT SIDE FEATURES */}
