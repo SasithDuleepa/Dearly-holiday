@@ -13,7 +13,7 @@ export default function HomeCooking() {
       
       {/* Heading */}
       <motion.h1
-        className="font-qwitcher mb-12 text-cs-blue-dark text-6xl md:text-8xl xl:text-9xl leading-tight"
+        className="font-qwitcher mb-12 text-[var(--cs-text-light)] text-6xl md:text-8xl xl:text-9xl leading-tight"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -37,7 +37,7 @@ export default function HomeCooking() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-cs-blue-dark text-base md:text-xl font-medium leading-relaxed">
+          <p className="text-[var(--cs-text-light)]  text-base md:text-xl font-medium leading-relaxed">
             Join our hands-on cooking class and uncover the secrets of authentic
             Sri Lankan cuisine — from fragrant coconut curries to crispy golden
             hoppers. In our family kitchen, you’ll cook with fresh local
@@ -62,7 +62,7 @@ export default function HomeCooking() {
           >
             <Link
               href="/cooking-class"
-              className="inline-block px-10 py-3 bg-cs-blue-medium text-cs-text-light text-lg rounded-full shadow-lg hover:bg-cs-blue-dark hover:scale-105 transition-all duration-300"
+              className="inline-block px-10 py-3 btn-glass text-cs-text-light text-lg rounded-full shadow-lg "
             >
               Explore More
             </Link>

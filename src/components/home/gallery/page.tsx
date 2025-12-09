@@ -6,25 +6,25 @@ const galleryItems = [
     id: 1,
     title: 'Safari',
     description: 'Explore the wild and witness majestic animals in their natural habitat.',
-    imageUrl: '/sample-images/home-gallery/1.png',
+    imageUrl: '/sample-images/home-gallery/2.png',
   },
   {
     id: 2,
     title: 'Cooking',
     description: 'Learn to cook delicious local cuisine with our expert chefs.',
-    imageUrl: '/sample-images/home-gallery/2.png',
+    imageUrl: '/sample-images/home-gallery/3.png',
   },
   {
     id: 3,
     title: 'Guest House',
     description: 'Relax and unwind in our comfortable and luxurious guest houses.',
-    imageUrl: '/sample-images/home-gallery/3.png',
+    imageUrl: '/sample-images/home-gallery/1.png',
   },
 ];
 
 const HomeGallery = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {galleryItems.map((item) => (
           <Link href="/gallery" key={item.id}>
@@ -39,8 +39,8 @@ const HomeGallery = () => {
 
               {/* Overlay */}
               <div className="absolute inset-0  bg-opacity-10 flex flex-col justify-end p-6">
-                <h3 className="text-cs-text-light text-2xl font-bold">{item.title}</h3>
-                <p className="text-cs-text-light mt-2">{item.description}</p>
+                <h3 className="text-[var(--cs-text-light)] text-2xl font-bold">{item.title}</h3>
+                <p className="text-[var(--cs-text-light)] mt-2">{item.description}</p>
               </div>
             </div>
           </Link>

@@ -10,154 +10,148 @@ import HomeSafariSection from "@/components/home/safari/page";
 import HomeCustomerFeedback from "@/components/home/customer feedback/page";
 import HomeGallery from "@/components/home/gallery/page";
 
-
-
 export default function Home() {
   return (
     <div className="bg-[var(--cs-bg-light)]">
       {/* 🌅 Hero Section */}
-      <section
-        className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center"
-      >
+      <section className="relative flex flex-col items-center justify-center h-[90vh] md:h-screen bg-cover bg-center px-4">
 
-
-        <div className="pic-wrapper absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 h-screen" >
-          <div className='figure  pic-1' ></div>
-  <div className='figure  pic-2 ' ></div>
-  <div className='figure  pic-3 ' ></div>
-  <div className='figure  pic-4 ' ></div>
-        </div>
-          
-        <div className=" absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
-
-        <div className="flex items-center z-10 justify-center w-[100%]  mt-70">
-          <h1  className="text-cs-text-light font-montserrat  text-8xl text-cs-text-light z-10 font-[300] border-t-4 border-b-4 ">Welcome to our little paradise</h1>
+        {/* Background Slider */}
+        <div className="pic-wrapper absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 h-full">
+          <div className="figure pic-1"></div>
+          <div className="figure pic-2"></div>
+          <div className="figure pic-3"></div>
+          <div className="figure pic-4"></div>
         </div>
 
-        <div className="flex justify-center items-center  z-10  gap-10 w-[100%] mt-[18%] ">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
-          <div className="z-10 text-right  w-[100%]  home-bottom-text-left-div">
-            <h1 className="font-montserrat text-4xl text-cs-text-light z-10 text-right font-[100]  home-bottom-text-left">Experience <br/> the warmth of <br/>Sri Lankan hospitality</h1>
+        {/* Main Title */}
+        <div className="flex items-center justify-center w-full z-10 mt-20 md:mt-0 px-4">
+          <h1 className="text-[var(--cs-text-light)] font-montserrat 
+            text-4xl sm:text-5xl md:text-7xl lg:text-8xl 
+            text-center font-light border-t-2 border-b-2 md:border-t-4 md:border-b-4 px-2">
+            Welcome to our little paradise
+          </h1>
+        </div>
+
+        {/* Bottom Hero Text */}
+        <div className="flex flex-col md:flex-row justify-center items-center z-10 gap-6 md:gap-10 w-full mt-16 md:mt-24 px-6">
+
+          <div className="text-center md:text-right w-full md:w-1/3">
+            <h1 className="font-montserrat text-2xl sm:text-3xl md:text-4xl text-[var(--cs-text-light)] font-light leading-snug">
+              Experience <br /> the warmth of <br /> Sri Lankan hospitality
+            </h1>
           </div>
-        
-        <div className="bg-cs-text-light  home-bottom-text-center-div"></div>
 
-        <div  className=" z-10  w-[100%] home-bottom-text-right-div">
-          <h1 className="font-montserrat text-5xl text-cs-text-light z-10 font-[300]  home-bottom-text-right">Dearly <br/> Holiday  Inn</h1>
+          {/* Divider */}
+          <div className="bg-[var(--cs-text-light)] h-[1px] md:h-[120px] w-1/2 md:w-[2px]"></div>
+
+          <div className="text-center md:text-left w-full md:w-1/3">
+            <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl text-[var(--cs-text-light)] font-light leading-snug">
+              Dearly <br /> Holiday Inn
+            </h1>
+          </div>
+
         </div>
-        
-        </div>
-
-
-
-   
       </section>
 
-
-
-
+      {/* About */}
       <motion.section
-        className="bg-cs-powder/30 py-20"
+        className="bg-cs-powder/30 py-16 md:py-20"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HomeAbout />
         </div>
       </motion.section>
 
-
-
-      {/* 🏡 Guest House Section */}
+      {/* Guest House */}
       <motion.section
-        className="py-0"
+        className="py-10 md:py-16"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HomeGuestHouse />
         </div>
       </motion.section>
 
-      {/* 🍛 Cooking Class Section */}
+      {/* Cooking */}
       <motion.section
         className="py-0"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className=" mx-auto  home-cooking w-full flex justify-center   bg-gradient-to-b from-black/60 to-black/80 ">
-         
-            <HomeCooking />
-         
-          
+        <div className="w-full flex justify-center bg-gradient-to-b from-black/60 to-black/80">
+          <HomeCooking />
         </div>
       </motion.section>
 
-      {/* 🦁 Safari Section */}
+      {/* Safari */}
       <motion.section
-        className=" py-20 "
+        className="py-16 md:py-20"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HomeSafariSection />
         </div>
       </motion.section>
 
-      {/* 🖼️ Gallery Section */}
+      {/* Gallery */}
       <motion.section
-        className=" py-20"
+        className="py-16 md:py-20"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HomeGallery />
         </div>
       </motion.section>
 
-      {/* 💬 Customer Feedback Section */}
+      {/* Feedback */}
       <motion.section
-        className="py-20 "
+        className="py-16 md:py-20"
         variants={{
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-}}
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HomeCustomerFeedback />
         </div>
       </motion.section>
 
-
- 
     </div>
   );
 }

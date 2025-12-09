@@ -32,12 +32,12 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "backdrop-blur-md bg-cs-bg-light/70 shadow-md"
+          ? "backdrop-blur-md bg-[var(--cs-bg-light)]/70 shadow-md"
           : "glass"
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-xl font-semibold text-cs-blue-dark">
+        <div className="text-xl font-semibold text-[var(--cs-blue-dark)]">
           <Link href="/">Diarly Home</Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6">
@@ -47,10 +47,10 @@ const Header = () => {
               href={link.href}
               className={`relative text-[17px] font-medium transition-all duration-300 ${
                 pathname === link.href
-                  ? "text-cs-blue-medium"
+                  ? "text-[var(--cs-text-light)] underline"
                   : isScrolled
-                  ? "text-cs-blue-dark hover:text-cs-blue-medium"
-                  : "text-cs-text-light hover:text-cs-powder"
+                  ? "text-[var(--cs-blue-dark)] hover:text-[var(--cs-blue-medium)]"
+                  : "text-[var(--cs-text-light)] hover:text-[var(--cs-powder)]"
               }`}
             >
               {link.label}

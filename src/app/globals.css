@@ -11,6 +11,15 @@
   --cs-powder: #d2c1b6;
   --cs-bg-light: #f5f6f7;
   --cs-text-light: #ffffff;
+  --cs-text-dark: #1b3c53;
+
+  --btn-dark: #1b3c53;
+  --btn-mid: #234c6a;
+  --btn-soft: #456882;
+  --btn-cream: #d2c1b6;
+
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
 }
 
 body {
@@ -24,6 +33,41 @@ body {
 }
 .font-montserrat {
   font-family: var(--font-montserrat), sans-serif;
+}
+
+.button {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--btn-soft);
+  border: 3px solid var(--btn-dark);
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+.button:hover {
+  background: var(--btn-dark);
+  color: var(--cs-text-light);
+}
+
+.btn-glass {
+  padding: 12px 28px;
+
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
 }
 
 /* home hero */
@@ -246,26 +290,6 @@ body {
   .sm-none {
     display: none;
   }
-}
-
-.button {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid oklch(55.4% 0.135 66.442);
-  border: 3px solid #e4b945;
-  border-radius: 45px;
-  transition: all 0.3s;
-  cursor: pointer;
-  background: white;
-  font-size: 1.2em;
-  font-weight: 550;
-}
-
-.button:hover {
-  background: oklch(55.4% 0.135 66.442);
-  color: white;
 }
 
 .swiper-wrapper {

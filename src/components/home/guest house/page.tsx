@@ -1,9 +1,8 @@
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import { Swiper } from "swiper";
+import Swiper from "swiper"; // Import Swiper core
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,15 +21,17 @@ export default function HomeGuestHouse() {
 
     const swiper = new Swiper(".guest-house-slider", {
       loop: true,
-      slidesPerView: 1,
+      // Default: 1 slide visible
+      slidesPerView: 1, 
       spaceBetween: 10,
       speed: 8000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
       },
+      // ⚠️ CORRECTED BREAKPOINTS: Ensure 1 slide per view for this design
       breakpoints: {
-        768: { slidesPerView: 2 },
+        768: { slidesPerView: 1 },
         1024: { slidesPerView: 1 },
       },
     });
@@ -48,52 +49,78 @@ export default function HomeGuestHouse() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8">
+    <main className="flex flex-col items-center justify-center min-h-screen p-4 sm:p-8 md:p-12 w-full">
 
-      {/* Heading */}
+      {/* 👑 Heading - Highly responsive typography */}
       <motion.h1
-        className="font-qwitcher mb-12 text-cs-blue-dark text-center text-6xl md:text-8xl xl:text-9xl leading-tight"
+        className="font-qwitcher mb-12 font-bold text-[var(--cs-blue-dark)] text-center 
+                   text-6xl md:text-8xl xl:text-9xl leading-tight w-full max-w-7xl"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        L<span className="text-cs-blue-medium font-semibold">earn to </span>
-        C<span className="text-cs-blue-medium font-semibold">ook </span>
-        T<span className="text-cs-blue-medium font-semibold">raditional </span>
-        S<span className="text-cs-blue-medium font-semibold">ri </span>
-        L<span className="text-cs-blue-medium font-semibold">ankan </span>
-        M<span className="text-cs-blue-medium font-semibold">eals</span>
+        S<span className="text-[var(--cs-blue-dark)] font-normal">tay </span>
+        W<span className="text-[var(--cs-blue-dark)] font-normal">ith </span>
+        H<span className="text-[var(--cs-blue-dark)] font-normal">eart </span>
+        &<span className="text-[var(--cs-blue-dark)] font-normal"> </span>
+        H<span className="text-[var(--cs-blue-dark)] font-normal">eritage </span>
       </motion.h1>
 
+      {/* --- */}
 
-      <div className=" flex flex-col lg:flex-row content-center white shadow-lg px-10 py-5 rounded-3xl bg-cs-bg-light">
-        <div className="lg:max-w-[500px] px-5 flex flex-col justify-between ">
+      {/* 🖼️ Content Box - Responsive layout switch (Column to Row) */}
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 
+                    bg-cs-bg-light shadow-lg px-4 sm:px-8 py-8 md:py-12 rounded-3xl w-full max-w-7xl">
+        
+        {/* TEXT SECTION */}
+        <div className="lg:w-1/2 px-0 sm:px-5 flex flex-col justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-6 text-cs-blue-dark">Stay with Comfort and Warmth</h1>
-            <p className="text-[18px] text-justify text-cs-blue-dark">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-[var(--cs-blue-dark)]">
+              Stay with Comfort and Warmth
+            </h1>
+            <p className="text-sm sm:text-base text-justify text-[var(--cs-blue-dark)] leading-relaxed">
               Nestled in the peaceful town of Tissamaharama, our guest house offers a cozy retreat surrounded by lush tropical gardens and a calm village atmosphere. Each room is thoughtfully designed for comfort — blending traditional Sri Lankan charm with modern simplicity. Whether you’re planning a Yala Safari or looking for a relaxing stay, you’ll find the perfect balance of tranquility and convenience here.
               <br /><br />
               What makes our guest house special is the genuine care and warmth we share with every guest. From the welcoming smiles to freshly prepared home-cooked meals, we ensure you feel right at home throughout your stay. Experience the beauty of rural Sri Lanka, enjoy peaceful evenings, and create unforgettable memories with us.
             </p>
           </div>
-          <Link href="/guest-house" className="button mt-6 lg:mt-0">
+
+          {/* 🚀 Link button with correct responsive styling */}
+          <Link 
+            href="/guest-house" 
+            className="mt-6 inline-block px-6 py-3 text-center text-white font-semibold 
+                       rounded-full bg-[var(--btn-dark)] hover:bg-[var(--btn-mid)] 
+                       transition-all duration-300 w-full sm:w-auto"
+          >
             Explore More
           </Link>
         </div>
-        <div className="swiper guest-house-slider max-w-full lg:max-w-[700px] overflow-hidden mt-6 lg:mt-0">
-          <div className="swiper-wrapper">
-            {images.map((img, idx) => (
-              <div key={idx} className="swiper-slide">
-                <Image
-                  src={img.img}
-                  alt={`Slide ${idx + 1}`}
-                  className="w-full h-auto lg:h-[600px] object-cover rounded-lg shadow-lg"
-                />
-              </div>
-            ))}
+        
+        {/* IMAGE SLIDER SECTION */}
+        <div className="lg:w-1/2 w-full mt-6 lg:mt-0">
+          <div className="swiper guest-house-slider w-full overflow-hidden rounded-xl">
+            <div className="swiper-wrapper flex">
+              {images.map((img, idx) => (
+                <div key={idx} className="swiper-slide w-full">
+                  <Image
+                    src={img.img}
+                    alt={`Guest House Slide ${idx + 1}`}
+                    // Responsive heights
+                    className="
+                      w-full 
+                      h-[250px] sm:h-[400px] lg:h-[550px] 
+                      object-cover rounded-xl shadow-md
+                    "
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority={idx === 0} 
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
       </div>
     </main>
   );
