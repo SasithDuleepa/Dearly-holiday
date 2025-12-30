@@ -9,23 +9,11 @@ import image2 from "../../../../public/sample-images/home-cooking/5.png";
 
 export default function HomeCooking() {
   return (
-    <section className="text-center max-w-7xl mx-auto px-6 md:px-16 py-20">
-      
-      {/* Heading */}
-      <motion.h1
-        className="font-qwitcher mb-12 text-[var(--cs-text-light)] text-6xl md:text-8xl xl:text-9xl leading-tight"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        L<span className="text-cs-blue-medium font-semibold">earn to </span>
-        C<span className="text-cs-blue-medium font-semibold">ook </span>
-        T<span className="text-cs-blue-medium font-semibold">raditional </span>
-        S<span className="text-cs-blue-medium font-semibold">ri </span>
-        L<span className="text-cs-blue-medium font-semibold">ankan </span>
-        M<span className="text-cs-blue-medium font-semibold">eals</span>
-      </motion.h1>
+    <section className="text-center max-w-7xl mx-auto px-6 md:px-16 py-10">
+
+      <h1 className="text-4xl sm:text-6xl font-lora font-bold mb-8 text-[white] text-center">
+              Learn to Cook Traditional Sri Lankan Meals
+            </h1>
 
       <div className="flex flex-col-reverse md:flex-row items-start justify-between gap-16 mt-10">
         

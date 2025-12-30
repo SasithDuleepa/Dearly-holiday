@@ -25,6 +25,10 @@ const galleryItems = [
 const HomeGallery = () => {
   return (
     <div className="container mx-auto px-4 ">
+
+      <h1 className="text-4xl sm:text-6xl font-lora font-bold mb-6 text-[black] text-center pb-10">
+              Our Gallery
+            </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {galleryItems.map((item) => (
           <Link href="/gallery" key={item.id}>
@@ -46,6 +50,16 @@ const HomeGallery = () => {
           </Link>
         ))}
       </div>
+      <div className='w-full flex justify-center mt-10'>
+              <Link
+              href="/gallery"
+              className="button inline-block  text-sm rounded-full shadow-lg mt-5 px-14"
+            >
+              Explore More ...
+            </Link>
+      </div>
+
+
     </div>
   );
 };

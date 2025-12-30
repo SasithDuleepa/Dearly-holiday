@@ -25,7 +25,7 @@ const features = [
 
 export default function HomeAbout() {
   return (
-    <section className="relative bg-[var(--cs-blue-dark)] shadow-2xl text-center rounded-3xl p-6 sm:rounded-[40px] sm:p-8 md:rounded-[60px] md:p-12 lg:rounded-[80px] lg:p-16 xl:p-20 overflow-hidden">
+    <section className="relative bg-[#007200] shadow-2xl text-center rounded-3xl p-6 sm:rounded-[40px] sm:p-8 md:rounded-[60px] md:p-12 lg:rounded-[80px] lg:p-16 xl:p-20 overflow-hidden">
 
       {/* Glow overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#cdb085]/30 to-[#8a6b45]/20 rounded-[inherit] pointer-events-none"></div>
@@ -68,7 +68,7 @@ export default function HomeAbout() {
             <motion.div
               key={index}
               className="flex items-center gap-3 sm:gap-4 bg-white/10 hover:bg-white/20 transition-all duration-300 rounded-2xl p-3 sm:p-4 md:p-5 shadow-md"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 1 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}

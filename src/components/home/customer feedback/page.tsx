@@ -45,20 +45,9 @@ export default function HomeCustomerFeedback() {
 
   return (
     <section>
-      {/* Heading */}
-      <motion.h1
-        className="font-qwitcher mb-12 font-bold text-[var(--cs-blue-dark)] text-center text-6xl md:text-8xl xl:text-9xl leading-tight"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        H<span className="font-normal">appy </span>
-        G<span className="font-normal">uests </span>
-        A<span className="font-normal">round </span>
-        T<span className="font-normal">he </span>
-        W<span className="font-normal">orld</span>
-      </motion.h1>
+      <h1 className="text-4xl sm:text-6xl font-lora font-bold mb-15 text-[black] text-center">
+             Happy Guests Around The World
+            </h1>
 
       {/* Grid */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto px-4">
@@ -66,8 +55,8 @@ export default function HomeCustomerFeedback() {
           <div
             key={index}
             className="
-              bg-[var(--cs-powder)]
-              border border-[var(--cs-powder)]
+              bg-[transparent]
+              border border-[#38B000]
               rounded-3xl p-7 
               shadow-md hover:shadow-xl
               hover:-translate-y-1 

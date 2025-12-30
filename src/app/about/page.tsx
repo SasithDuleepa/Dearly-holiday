@@ -1,9 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Banner from "../../../public/images/about_banner.png";
+import Banner from "../../../public/images/dearly cover photos/about.png";
+// import Banner from "../../../public/images/banner_test-1.png";
 import Guest from "../../../public/images/4.png";
 import Desika from "../../../public/images/desika.jpg";
+import Chef from "../../../public/images/dearly cover photos icons/about1.png"
+import Travel from "../../../public/images/dearly cover photos icons/about2.png"
+import Elephant from "../../../public/images/dearly cover photos icons/about3.png"
+import Relax from "../../../public/images/dearly cover photos icons/about4.png"
 
 export default function AboutPage() {
   return (
@@ -12,48 +17,90 @@ export default function AboutPage() {
       {/* -------------------------------------------------- */}
       {/* HERO SECTION */}
       {/* -------------------------------------------------- */}
-      <section
-        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${Banner.src})` }}
-      >
-        {/* gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--cs-blue-dark)]/20 to-[var(--cs-blue-medium)]/30" />
+<section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] bg-[#007200] flex items-center justify-center overflow-hidden">
 
-        {/* title */}
-        <h1 className="relative z-10 text-[var(--cs-text-light)] font-qwitcher text-7xl md:text-9xl text-center px-4 font-bold leading-tight drop-shadow-lg">
-          W<span className="text-[var(--cs-text-light)]">elcome </span>
-          T<span className="text-[var(--cs-text-light)]">o </span>
-          O<span className="text-[var(--cs-text-light)]">ur </span>
-          W<span className="text-[var(--cs-text-light)]">orld </span>
-          O<span className="text-[var(--cs-text-light)]">f </span>
-          C<span className="text-[var(--cs-text-light)]">urated </span>
-          E<span className="text-[var(--cs-text-light)]">xperiences</span>
-        </h1>
-      </section>
+  {/* Chef */}
+  <Image
+    src={Chef}
+    alt="Chef"
+    className="
+      absolute bottom-0 left-2
+      w-[300px] sm:w-[400px] lg:w-[600px]
+       sm:block
+    "
+  />
+
+  {/* Travel */}
+  <Image
+    src={Travel}
+    alt="Travel"
+    className="
+      absolute bottom-0 left-30
+      w-[100px] sm:w-[160px] lg:w-[220px]
+      hidden md:block
+    "
+  />
+
+  {/* Elephant */}
+  <Image
+    src={Elephant}
+    alt="Elephant"
+    className="
+      absolute bottom-0 right-0
+      
+      w-[300px]  sm:w-[300px] md:w-[400px] lg:w-[800px] hidden
+      sm:block
+    "
+  />
+
+  {/* Relax */}
+  <Image
+    src={Relax}
+    alt="Relax"
+    className="
+      absolute bottom-0 right-10
+      w-[120px] sm:w-[180px] lg:w-[260px]
+       sm:block
+    "
+  />
+
+  {/* Text */}
+  <h1 className="
+    relative z-10
+    text-3xl sm:text-5xl lg:text-7xl
+    font-lora font-bold
+    text-white text-center
+    max-w-[90%] sm:max-w-[80%]
+  ">
+    Welcome To Our World Of Curated Experiences
+  </h1>
+
+</section>
+
 
 
 
       {/* -------------------------------------------------- */}
       {/* FOUNDER SECTION */}
       {/* -------------------------------------------------- */}
-      <div className="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+      <div className="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* image */}
         <Image
           src={Desika}
           alt="Desika"
-          width={500}
-          height={500}
-          className="rounded-2xl object-cover shadow-xl border-4 border-[var(--cs-blue-light)]"
+          width={450}
+          height={400}
+          className="rounded-2xl object-cover shadow-xl border-4 border-[#38B000]"
         />
 
         {/* text */}
         <div>
-          <h2 className="text-4xl font-bold text-[var(--cs-blue-dark)]">
+          <h2 className="text-4xl font-bold text-[#004B23]">
             Meet Our Founder
           </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-700">
+          <p className="mt-6 text-lg leading-relaxed text-black">
             Our founder, <span className="font-semibold">Desika</span>, has a deep
             passion for creating unforgettable experiences. With a strong
             background in hospitality and a deep love for nature, she has
@@ -68,15 +115,15 @@ export default function AboutPage() {
       {/* -------------------------------------------------- */}
       {/* OUR STORY SECTION */}
       {/* -------------------------------------------------- */}
-      <div className= "max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center mt-10 mb-20">
+      <div className= "max-w-6xl mx-auto mt-30 grid grid-cols-1 md:grid-cols-2 gap-14 items-center  mb-20">
 
         {/* text first (for desktop) */}
         <div className="order-2 md:order-1">
-          <h2 className="text-4xl font-bold text-[var(--cs-blue-dark)]">
+          <h2 className="text-4xl font-bold text-[#004B23]">
             Our Story
           </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-700">
+          <p className="mt-6 text-lg leading-relaxed text-black">
             Our journey began with a simple idea — to create a sanctuary where
             people can escape the noise of everyday life. We believe in the power
             of nature to heal, inspire, and rejuvenate the soul.
@@ -94,7 +141,7 @@ export default function AboutPage() {
             alt="Guest House"
             width={600}
             height={600}
-            className="rounded-2xl object-cover shadow-xl border-4 border-[var(--cs-blue-light)]"
+            className="rounded-2xl object-cover shadow-xl border-4 border-[#38B000]"
           />
         </div>
       </div>

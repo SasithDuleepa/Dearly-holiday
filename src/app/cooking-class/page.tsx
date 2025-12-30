@@ -1,24 +1,61 @@
 "use client";
+import Image from "next/image";
+import Banner from "../../../public/images/dearly cover photos/cooking.png";
+
+import Bowl from "../../../public/images/dearly cover photos icons/cooking1.png"
+import Lady from "../../../public/images/dearly cover photos icons/cooking2.png"
+import Leaf from "../../../public/images/dearly cover photos icons/cooking3.png"
 
 const CookingClassPage = () => {
   return (
-    <section className="py-20 bg-[var(--cs-powder)]/70">
-      {/* Title */}
-      <h1 className="font-qwitcher mb-4 xl:mb-6 text-foreground text-7xl xl:text-9xl text-center">
-        C<span className="text-primary font-semibold">ook </span>
-        W<span className="text-primary font-semibold">ith </span>
-        D<span className="text-primary font-semibold">iarly </span>
-      </h1>
+    <section className="">
+            <section
+        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center bg-[#007200]"
+      >
+        <Image
+                    src={Bowl}
+                    alt="Bowl"
+                    className="
+                      absolute bottom-20 sm:bottom-0 lg:bottom-0 left-2 z-0
+                      w-[150px] sm:w-[250px] md:w-[300px] lg:w-[400px]
+                       sm:block
+                    "
+                  />
+                    <Image
+                      src={Leaf}
+                      alt="Leaf"
+                      className="
+                        absolute lg:bottom-50 sm:bottom-40 md:bottom-50 bottom-50 right-10 z-0
+                        w-[120px] sm:w-[180px]  lg:w-[300px]
+                         sm:block
+                      "
+                    />
+                                <Image
+                      src={Lady}
+                      alt="Lady"
+                      className="
+                        absolute bottom-0 sm:right-5 lg:right-20 md:right-2 right-2 z-30
+                        w-[300px] sm:w-[300px] md:w-[350px] lg:w-[400px]
+                         sm:block
+                      "
+                    />
+        
+        
+              <h1 className="text-4xl sm:text-7xl font-lora font-bold mb-6 text-white text-center max-w-[80%] z-50">
+             Cook With Diarly
+            </h1>
+      </section>
+
 
       {/* Intro */}
-      <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+      <p className="text-center max-w-6xl text-black mx-auto mt-10 mb-12 text-lg leading-relaxed">
         Experience the joy of cooking authentic Sri Lankan dishes in our family kitchen. 
         From grinding fresh spices to serving your own homemade curry, every step brings 
         you closer to the heart of our culture and traditions.
       </p>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mt-5">
         {/* Left - Text */}
         <div>
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -57,7 +94,7 @@ const CookingClassPage = () => {
       </div>
 
       {/* Extra Section */}
-      <div className="max-w-4xl mx-auto mt-20 text-center">
+      <div className="max-w-4xl mx-auto mt-20 text-center pb-10">
         <p className="text-gray-700 text-lg leading-relaxed">
           “Cooking with Dially was the highlight of our trip! We learned so much about Sri Lankan 
           spices and culture — and the meal we made together was unforgettable.”  

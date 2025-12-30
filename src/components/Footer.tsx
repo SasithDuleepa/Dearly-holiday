@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-cs-powder border-t border-cs-powder">
+    <footer className="bg-cs-powder border-t border-[#004B23]">
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
         
         {/* Brand Section */}
         <div>
-          <h2 className="text-2xl font-bold text-cs-blue-dark">Dearly Home</h2>
+          <h2 className="text-2xl font-bold text-[#004B23]">Dearly Home</h2>
           <p className="text-cs-blue-dark mt-3 text-sm leading-relaxed">
             A peaceful getaway offering authentic Sri Lankan hospitality,
             home-cooked meals, and unforgettable Yala safari adventures.
@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-cs-blue-dark mb-3">
+          <h3 className="text-lg font-semibold text-[#004B23] mb-3">
             Quick Links
           </h3>
           <ul className="space-y-2">
@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Social Media */}
         <div className="flex flex-col items-center md:items-end">
-          <h3 className="text-lg font-semibold text-cs-blue-dark mb-3">
+          <h3 className="text-lg font-semibold text-[#004B23]">
             Follow Us
           </h3>
           <div className="flex justify-center md:justify-end space-x-5">
@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-cs-blue-light py-4 text-center text-sm text-cs-blue-dark bg-[var(--cs-powder)]">
+      <div className="border-t border-cs-blue-light py-4 text-center text-sm text-white bg-[#007200]">
         © {new Date().getFullYear()} Dearly Home. All rights reserved.
       </div>
     </footer>

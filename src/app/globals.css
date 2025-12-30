@@ -72,8 +72,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid var(--btn-soft);
-  border: 3px solid var(--btn-dark);
+  border: 3px solid #38b000;
+
   border-radius: 45px;
   transition: all 0.3s;
   cursor: pointer;
@@ -83,7 +83,7 @@ body {
 }
 
 .button:hover {
-  background: var(--btn-dark);
+  background: #38b000;
   color: var(--cs-text-light);
 }
 

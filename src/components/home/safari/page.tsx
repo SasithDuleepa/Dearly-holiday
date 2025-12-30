@@ -5,25 +5,13 @@ import { motion } from "framer-motion";
 
 const HomeSafariSection = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 ">
-      {/* Heading */}
-      <motion.h1
-        className="font-qwitcher text-center mb-12 text-6xl md:text-8xl xl:text-9xl leading-tight font-bold  text-[var(--cs-blue-dark)]"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        E<span className="text-[var(--cs-blue-dark)] font-normal">mbark </span>
-        O<span className="text-[var(--cs-blue-dark)] font-normal">n </span>
-        A<span className="text-[var(--cs-blue-dark)] font-normal">n  </span>
-        U<span className="text-[var(--cs-blue-dark)] font-normal">nforgettable </span>
-        S<span className="text-[var(--cs-blue-dark)] font-normal">afari </span>
-        A<span className="text-[var(--cs-blue-dark)] font-normal">dventure </span>
-      </motion.h1>
+    <section className="py-5 md:py-16 lg:py-20 ">
+      <h1 className="text-4xl sm:text-6xl font-lora font-bold mb-6 text-[black] text-center">
+              Embark On An Unforgettable Safari Adventure
+            </h1>
       
       {/* TOP CENTER TEXT */}
-      <div className="text-center max-w-3xl mx-auto px-4 mb-12">
+      <div className="text-center max-w-4xl mx-auto px-4 mb-12 mt-16">
 
 
         
@@ -44,8 +32,8 @@ const HomeSafariSection = () => {
               {/* Feature 1 */}
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[var(--cs-blue-dark)]">
-                    <FaBinoculars className="h-6 w-6" />
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[#38B000]">
+                    <FaBinoculars className="h-6 w-6 " />
                   </div>
                 </div>
                 <div className="ml-4">
@@ -59,7 +47,7 @@ const HomeSafariSection = () => {
               {/* Feature 2 */}
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[var(--cs-blue-dark)]">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[#38B000]">
                     <FaCameraRetro className="h-6 w-6" />
                   </div>
                 </div>
@@ -74,7 +62,7 @@ const HomeSafariSection = () => {
               {/* Feature 3 */}
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[var(--cs-blue-dark)]">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[#38B000]">
                     <FaMapMarkedAlt className="h-6 w-6" />
                   </div>
                 </div>
@@ -89,7 +77,7 @@ const HomeSafariSection = () => {
               {/* Feature 4 */}
               <div className="flex items-start">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[var(--cs-blue-dark)]">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-cs-blue-medium text-[#38B000]">
                     <FaTree className="h-6 w-6" />
                   </div>
                 </div>
