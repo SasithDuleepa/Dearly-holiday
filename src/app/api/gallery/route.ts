@@ -5,20 +5,20 @@ import path from 'path';
 export async function GET(req: NextRequest) {
   try {
     const categoryPaths = {
-      'cooking-class': 'cooking home',
+      'cooking-class': 'cooking class',
       'guest-house': 'guest house',
       'safari': 'safari',
     };
 
     const imagesByCategory = Object.entries(categoryPaths).reduce((acc, [category, dirName]) => {
-      const categoryDir = path.join(process.cwd(), 'public', 'images', dirName);
+      const categoryDir = path.join(process.cwd(), 'public', 'gallery', dirName);
       try {
         if (fs.existsSync(categoryDir)) {
           const imageFiles = fs.readdirSync(categoryDir);
-          const imageUrls = imageFiles.map(file => `/images/${dirName}/${file}`);
+          const imageUrls = imageFiles.map(file => `/gallery/${dirName}/${file}`);
           acc[category] = imageUrls;
         } else {
-            acc[category] = [];
+          acc[category] = [];
         }
       } catch (e) {
         console.error(e)

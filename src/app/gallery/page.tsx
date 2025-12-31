@@ -2,6 +2,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+import Reel from "../../../public/images/dearly cover photos icons/gallery1.png"
+import Board from "../../../public/images/dearly cover photos icons/gallery2.png"
+import Leaf from "../../../public/images/dearly cover photos icons/gallery3.png"
+
 interface ImagesByCategory {
   [category: string]: string[];
 }
@@ -49,6 +53,33 @@ export default function GalleryPage() {
       <section
         className="relative h-[60vh] bg-cover bg-center flex flex-col items-center justify-center bg-[#007200]"
       >
+         <Image
+                                                            src={Reel}
+                                                            alt="Reel"
+                                                            className="
+                                                              absolute bottom-0 sm:bottom-0 lg:bottom-0 left-0 z-0 sm:left-0 md:left-[-100px] lg:left-0
+                                                              w-[0px] sm:w-[0px] md:w-[1080px] lg:w-[1080px]
+                                                                                                 sm:block
+                                                            "
+                                                          />
+                                                            <Image
+                                                              src={Leaf}
+                                                              alt="Leaf"
+                                                              className="
+                                                                absolute top-0 right-0 z-0
+                                                                w-[220px] sm:w-[280px] md:w-[250px]  lg:w-[400px]
+                                                                 sm:block
+                                                              "
+                                                            />
+                                                                        <Image 
+                                                              src={Board}
+                                                              alt="Board"
+                                                              className="
+                                                                absolute bottom-0 sm:right-1 lg:right-40 md:right-20 right-1 z-30
+                                                                w-[200px] sm:w-[200px] md:w-[250px] lg:w-[300px]
+                                                                 sm:block
+                                                              "
+                                                            />
         <h1 className="text-4xl sm:text-7xl font-lora font-bold mb-6 mt-20 text-white text-center max-w-[80%] z-50">
           Captured Memories
         </h1>

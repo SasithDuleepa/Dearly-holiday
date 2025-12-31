@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
   }
 
   const categoryPaths: { [key: string]: string } = {
-    'cooking-class': 'cooking home',
+    'cooking-class': 'cooking class',
     'guest-house': 'guest house',
     'safari': 'safari',
   };
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid category' }, { status: 400 });
   }
 
-  const uploadDir = path.join(process.cwd(), 'public', 'images', dirName);
+  const uploadDir = path.join(process.cwd(), 'public', 'gallery', dirName);
 
   try {
     await fs.mkdir(uploadDir, { recursive: true });
