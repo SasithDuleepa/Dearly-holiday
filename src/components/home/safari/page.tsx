@@ -102,7 +102,7 @@ const HomeSafariSection = () => {
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <Image
-                src="/images/safari_banner.png"
+                src="/images/safari.png"
                 alt="Safari"
                 width={600}
                 height={400}
@@ -112,7 +112,7 @@ const HomeSafariSection = () => {
 
             <div>
               <Image
-                src="/images/safari.png"
+                src="/images/safari2.png"
                 alt="Safari Jeep"
                 width={300}
                 height={200}
@@ -122,7 +122,7 @@ const HomeSafariSection = () => {
 
             <div>
               <Image
-                src="/images/safari2.jpg"
+                src="/images/safari3.jpg"
                 alt="Safari Landscape"
                 width={300}
                 height={200}
